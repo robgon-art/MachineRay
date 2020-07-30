@@ -3,7 +3,7 @@ import re
 from bs4 import BeautifulSoup
 import time
 
-file_path = "D:/art/wikiart2"
+file_path = "art/wikiart"
 base_url = "https://www.wikiart.org"
 
 # iterate through all artists by last name alphabetically
