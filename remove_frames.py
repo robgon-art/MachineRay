@@ -4,8 +4,8 @@ from matplotlib.pyplot import figure
 from os import listdir
 from scipy.spatial import distance
 
-from_path = 'D:/art/crop_test/'
-to_path   = 'D:/art/crop_test_out/'
+from_path = 'art/wikiart/'
+to_path   = 'art/cropped/'
 
 def find_left():
     left = 0
@@ -26,7 +26,6 @@ def find_left():
         left = left+1
     return left
 
-
 def find_top():
     top = 0
     for i in range(0, h_pad):
@@ -46,7 +45,6 @@ def find_top():
         top = top+1
     return top
 
-
 def find_right(right):
     right = w
     for i in range(0, w_pad):
@@ -65,7 +63,6 @@ def find_right(right):
 
         right = right-1
     return right
-
 
 def find_bottom(bottom):
     for i in range(0, h_pad):
