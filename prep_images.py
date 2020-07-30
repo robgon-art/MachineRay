@@ -20,6 +20,7 @@ seq = iaa.Sequential([
     iaa.AddToHueAndSaturation((-20, 20))
 ])
 
+# loop through the images, resizing and augementing
 path, dirs, files = next(os.walk(data_path))
 for file in sorted(files):
   print(file)
