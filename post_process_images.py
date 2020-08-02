@@ -12,7 +12,7 @@ model = RRDN(weights='gans')
 npimg = np.array(img)
 row,col,ch= npimg.shape
 
-# Add some npise
+# Add some noise
 mean = 0
 var = 0.1
 sigma = var**0.5
