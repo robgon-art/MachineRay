@@ -1,4 +1,5 @@
 # MachineRay
+By Robert. A Gonsalves
 ![MachineRay Output](https://github.com/robgon-art/MachineRay/blob/master/images/big2.jpg)
 
 For this project, I gathered images of abstract paintings from WikiArt.org, processed them, and fed them into StyleGAN2 at the size of 1024x1024.
