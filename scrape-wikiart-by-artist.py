@@ -7,7 +7,7 @@ file_path = "art/wikiart"
 base_url = "https://www.wikiart.org"
 
 # iterate through all artists by last name alphabetically
-for c in range(ord('n'), ord('z')+1):
+for c in range(ord('a'), ord('z')+1):
     char = chr(c)
     artist_list_url = base_url + '/en/Alphabet/' + char + '/text-list'
 
