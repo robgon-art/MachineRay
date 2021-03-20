@@ -25,12 +25,13 @@ path, dirs, files = next(os.walk(from_path))
 for file in sorted(files):
   print(file)
   image = Image.open(path + "/" + file)
-  image.save(to_path + "/" + file)
-  image_resized = image.resize((size,size), resample=Image.BILINEAR)
-  image_np = np.array(image_resized)
-  images = [image_np] * num_augmentations
-  images_aug = seq(images=images)
-  for i in range(0, num_augmentations):
-    im = Image.fromarray(np.uint8(images_aug[i]))
-    to_file = to_path + "/" + file[:-4] + '_' + str(i).zfill(2) + '.jpg'
-    im.save(to_file) #, quality=95)
+  if image.mode == "RGB":
+    image.save(to_path + "/" + file)
+    image_resized = image.resize((size,size), resample=Image.BILINEAR)
+    image_np = np.array(image_resized)
+    images = [image_np] * num_augmentations
+    images_aug = seq(images=images)
+    for i in range(0, num_augmentations):
+      im = Image.fromarray(np.uint8(images_aug[i]))
+      to_file = to_path + "/" + file[:-4] + '_' + str(i).zfill(2) + '.jpg'
+      im.save(to_file) #, quality=95)
